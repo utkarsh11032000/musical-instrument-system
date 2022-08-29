@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<style type="text/css">
+#b {
+  position: relative;
+  left: 675px;
+  top: 150px;
+}
+</style>
+<div class="container mt-5">
+
+<ul class="list-group">
+    <li class="list-group-item active">Your score</li>
+    {% for s in score %}
+    <li class="list-group-item ">{{s.score}} out of 10 in {{s.course.course_name}}</li>
+
+    {% endfor %}
+    {% if score %}
+    {% else %}
+    <p class="text-center mt-5">You haven't given any exam yet.</p>
+    <a class="btn btn-dark" href="{% url 'quiz' %}">Give Exam</a>
+
+
+    {% endif %}
+  </ul>
+  
+
+</div>
+
+   <a id="b" class="btn btn-primary" href="{% url 'certificate' %}">Get Certificate</a>
+
+{% endblock %}

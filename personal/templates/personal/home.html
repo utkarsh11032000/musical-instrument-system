@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Virtual Instruments Learning</h1>
+  <p class="lead">It's easy to play any musical instrument: all you have to do is touch the right key at the right time and the instrument will play itself...</p>
+</div>
+
+{% if request.user.is_authenticated %}
+	<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Beginner Level</h4>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title pricing-card-title">FREE</h2>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Providing basic guide about playing instrument such as guitar, piano etc.</li>
+        </ul>
+        <a class="btn btn-outline-primary" href="{% url 'piano' %}">Start</a>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Intermediate Level</h4>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title pricing-card-title">FREE</h2>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li> Providing knowledge of chords, guitar(jamming)</li>
+          <li> Test </li>
+        </ul>
+        <a class="btn btn-outline-primary" href="{% url 'piano' %}">Start</a>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Expert Level</h4>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title pricing-card-title">FREE</h2>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Formally they have the skills to use the instrument so they can appear the test then become master in that</li>
+		<li> Certificate</li>
+        </ul>
+        <a class="btn btn-outline-primary" href="{% url 'piano' %}">Start</a>
+      </div>
+    </div>
+  </div>
+
+{% else %}
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Beginner Level</h4>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title pricing-card-title">FREE</h2>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Providing basic guide about playing instrument such as guitar, piano etc.</li>
+        </ul>
+        <a class="btn btn-outline-primary" href="{% url 'register' %}">Sign Up</a>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Intermediate Level</h4>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title pricing-card-title">FREE</h2>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li> Providing knowledge of chords, guitar(jamming)</li>
+          <li> Test </li>
+        </ul>
+        <a class="btn btn-outline-primary" href="{% url 'register' %}">Sign Up</a>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Expert Level</h4>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title pricing-card-title">FREE</h2>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Formally they have the skills to use the instrument so they can appear the test then become master in that</li>
+		<li> Certificate</li>
+        </ul>
+        <a class="btn btn-outline-primary" href="{% url 'register' %}">Sign Up</a>
+      </div>
+    </div>
+  </div>
+
+{% endif %}
+
+{% endblock content %}

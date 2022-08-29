@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Piano</title>
+<link rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Piano</h4>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title pricing-card-title">FREE</h2>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Providing basic guide about playing instrument such as guitar, piano etc.</li>
+        </ul>
+        <a class="btn btn-outline-primary" href="{% url 'test_piano' %}">Start</a>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Guitar</h4>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title pricing-card-title">FREE</h2>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li> Providing knowledge of chords, guitar(jamming)</li>
+          <li> Test </li>
+        </ul>
+        <a class="btn btn-outline-primary" href="{% url 'guitar' %}">Start</a>
+      </div>
+    </div> 
+</div>
+</body>
+</html>
+{% endblock content %}
